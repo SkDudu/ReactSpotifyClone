@@ -89,7 +89,7 @@ function App() {
             </li>
           </ul>
         </div>
-        <div class="box e">
+        <div class="box e"> 
           <img className="Social" src={instagram} alt="Logo" />
           <img className="Social" src={twitter} alt="Logo" />
           <img className="Social" src={facebook} alt="Logo" />
