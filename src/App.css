@@ -3,25 +3,15 @@
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  width: 50px;
+  height: 50px;
+  margin-left: 10%;
+  margin-top: 1em;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: black;
+  min-height: 10%;
 }
 
 .App-link {
@@ -35,4 +25,124 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.nav-bar{
+  color: white;
+  display: flex !important;
+  justify-content: end !important;
+  height: 80px;
+}
+
+ul{
+  margin-top: 2em;
+  margin-left: 37%;
+}
+
+a{
+  color: white;
+  margin-right: 50px;
+  text-decoration: none;
+}
+
+body{
+  background-color: black;
+}
+
+.Foto{
+  width: 100%;
+  display:inline-block;
+  position:relative;
+  filter: grayscale(.75);
+}
+
+button.BtnDownload{
+  position:absolute;
+  top:50%;
+  left:40%;
+  background-color: green;
+  border-radius: 30px;
+  width: 200px;
+  height: 50px;
+  text-decoration: none;
+  border: 0 none;
+  color: white;
+  font-weight: 800;
+}
+
+p{
+  color: white;
+  font-size: xx-large;
+  font-weight: 600;
+  position:absolute;
+  top:60%;
+  left: 13%;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px 100px;
+  grid-gap: 100px;
+  background-color: black;
+  color: #444;
+  margin-bottom: 300px;
+  margin-top: 3em;
+}
+
+.box {
+  width: 150px;
+  height: 50px;
+  background-color: black;
+  color: #fff;
+  font-size: 100%;
+  text-align: center;
+}
+
+ul.nav-footer{
+  margin: 0;
+  margin-left: 0px;
+  padding: 0;
+}
+
+ul.nav-footer a{
+  margin-right: 0;
+}
+
+li {
+  list-style-type: none;
+  text-align: left;
+  margin: 1em;
+}
+
+.a-cinza{
+  color: gray;
+}
+
+div.box.f{
+  background-color: black;
+}
+
+img.Social{
+  width: 15%;
+  padding: 1em;
+}
+
+div.box.e{
+  margin-left: 10em;
+  width: 300px;
+}
+
+div.p-footer{
+  text-align: start;
+  margin-left: 2em;
+  margin-bottom: 4em;
+}
+
+div.p-footer a{
+  color: rgb(156, 156, 156);
+  font-size: small;
+  font-weight: 300;
+  margin-right: 3em;
+  text-decoration: none;
 }
