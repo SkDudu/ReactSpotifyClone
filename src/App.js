@@ -4,7 +4,6 @@ import instagram from './instagram.svg'
 import facebook from './facebook.svg'
 import twitter from './twitter.svg'
 import './App.css';
-import Collapsible from 'react-collapsible';
 import React from "react";
 import {
   BrowserRouter as Router,
