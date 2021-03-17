@@ -4,24 +4,48 @@ import instagram from './instagram.svg'
 import facebook from './facebook.svg'
 import twitter from './twitter.svg'
 import './App.css';
+import Collapsible from 'react-collapsible';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <Router>
+      <div>
         <nav className="nav-bar">
         <img className="App-logo" src={logo} alt="Logo" />
           <ul>
-            <a href="#">Premium</a>
-            <a href="#">Suporte</a>
-            <a href="#">Baixar</a>
+            <Link to="/">Home</Link>
+            <Link to="/faq">FAQ</Link>
             <a>|</a>
-            <a href="#">Inscrever-se</a>
-            <a href="#">Entrar</a>
+            <Link to="/">Inscrever-se</Link>
+            <Link to="/">Entrar</Link>
           </ul>
         </nav>
-      </header>
 
+        {/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+        <Switch>
+          <Route path="/faq">
+            <Faq />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
+  );
+}
+
+function Home() {
+  return (
+    <div className="App">
       <body>
         <div>
         <img className="Foto" src={fotoHome} alt="foto home"/>
@@ -107,4 +131,22 @@ function App() {
   );
 }
 
-export default App;
+function Faq() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <nav className="nav-bar">
+        <img className="App-logo" src={logo} alt="Logo" />
+          <ul>
+            <a href="#">Premium</a>
+            <a href="#">Suporte</a>
+            <a href="#">Baixar</a>
+            <a>|</a>
+            <a href="#">Inscrever-se</a>
+            <a href="#">Entrar</a>
+          </ul>
+        </nav>
+      </header>
+    </div>
+  );
+}

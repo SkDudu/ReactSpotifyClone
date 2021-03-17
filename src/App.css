@@ -27,23 +27,23 @@
   }
 }
 
-
-.nav-bar{
-  color: white;
-  display: flex !important;
-  justify-content: end !important;
-  height: 80px;
+nav.nav-bar{
+  height: 110px;
+  display: flex;
+  align-items: center;
 }
 
 ul{
   margin-top: 2em;
-  margin-left: 37%;
+  margin-left: 55%;
 }
 
 a{
   color: white;
   margin-right: 50px;
   text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 body{
