@@ -35,7 +35,7 @@ nav.nav-bar{
 
 ul{
   margin-top: 2em;
-  margin-left: 55%;
+  margin-left: 46%;
 }
 
 a{
@@ -88,6 +88,7 @@ p{
   color: #444;
   margin-bottom: 300px;
   margin-top: 3em;
+  margin-left: 10em;
 }
 
 .box {
@@ -129,7 +130,7 @@ img.Social{
 }
 
 div.box.e{
-  margin-left: 10em;
+  margin-left: 5em;
   width: 300px;
 }
 
@@ -145,4 +146,89 @@ div.p-footer a{
   font-weight: 300;
   margin-right: 3em;
   text-decoration: none;
+}
+
+h1{
+  color: white;
+  font-size: larger;
+}
+
+label{
+  margin: 0;
+  padding: 0;
+}
+
+div.label{
+  color: white;
+  display: grid;
+  justify-content: left;
+}
+
+form{
+  display: grid;
+  background-color: transparent;
+  width: 400px;
+  margin-left: 480px;
+}
+
+input{
+  width: 300px;
+  height: 30px;
+  border: none;
+}
+
+form h1{
+  display: flex;
+  justify-content: center;
+  color: black;
+  margin-top: 30px;
+}
+
+.form-cadastro__group{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.form-cadastro__group label{
+  color: black;
+  margin-bottom: 5px;
+  margin-left: 40px;
+}
+
+.form-cadastro__group input{
+  display: flex;
+  justify-content: center;
+  border: 1px solid #00d95f;
+  padding: 0 10px;
+  background-color: white;
+  color: black;
+  margin: 0 40px;
+}
+
+button.form-btn{
+  background-color: green;
+  border-radius: 30px;
+  width: 150px;
+  height: 40px;
+  text-decoration: none;
+  border: 0 none;
+  color: white;
+  font-weight: 800;
+  margin-bottom: 40px;
+  margin-top: 30px;
+  margin-left: 120px;
+}
+
+.fundo-form{
+  background-color: rgb(146, 146, 146, 0.1);
+}
+
+div.error{
+  width: 300px;
+  padding: 5px 10px;
+  margin-top: 5px;
+  margin-left: 40px;
+  color: rgb(130, 0, 0);
 }

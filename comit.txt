@@ -2,10 +2,63 @@
 2. "git commit -m "Add existing file""
 3. "git push origin master"
 
- 
-            <a href="#">Premium</a>
-            <a href="#">Suporte</a>
-            <a href="#">Baixar</a>
-            <a>|</a>
-            <a href="#">Inscrever-se</a>
-            <a href="#">Entrar</a>
+
+
+<Grid className="form-cadastro__group" item xs={12}>
+<label htmlFor="name">Email:</label>
+<input required id="email" name="email" type="email" onChange={onChange} value={this.state.email}/>
+</Grid>
+<Grid className="form-cadastro__group" item xs={12}>
+<label htmlFor="name">Senha:</label>
+<input required id="password" name="senha" type="password" onChange={onChange} value={this.state.password}/>
+</Grid>
+
+
+
+function initialState(){
+  return{user:'', password:''};
+}
+
+function Login(){
+  const [values, setValues] = useState(initialState);
+
+  function onChange(event){
+    const {values, email} = event.target
+    setValues({
+      ...values,
+      [email]: values,
+    })
+  }
+
+  return (
+    <div className="App">
+      <body>
+        <div>
+          <img className="Foto" src={fotoCadastro} alt="foto home"/>
+          <form>
+            <Paper className="fundo-form">
+            <h1 className="form-titulo">Login</h1>
+            <Grid container spacing={3}>
+              <Grid className="form-cadastro__group" item xs={12}>
+                <label htmlFor="name">Usuário:</label>
+                <input required id="user" name="name" type="text" onChange={onChange} values={values.user}/>
+              </Grid>
+              <Grid className="form-cadastro__group" item xs={12}>
+                <label htmlFor="name">Email:</label>
+                <input required id="email" name="email" type="email" onChange={onChange} values={values.email}/>
+              </Grid>
+              <Grid className="form-cadastro__group" item xs={12}>
+                <label htmlFor="name">Senha:</label>
+                <input required id="password" name="senha" type="password" onChange={onChange} values={values.password}/>
+              </Grid>
+            </Grid>
+              <div>
+                <button className="form-btn" type="submit">Logar</button>
+              </div>
+            </Paper>
+          </form>
+        </div>
+      </body>
+    </div>
+  )
+}
