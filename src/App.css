@@ -232,3 +232,73 @@ div.error{
   margin-left: 40px;
   color: rgb(130, 0, 0);
 }
+
+.login{
+  display: flex;
+  background-color: black;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  width: 100%;
+}
+
+h1.login-titulo{
+  color: black;
+  display: flex;
+  justify-content: center;
+}
+
+div.user-input{
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+div.user-input svg{
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.5rem;
+}
+
+input#email{
+  border: 1px solid #00d95f;
+  background-color: white;
+  color: black;
+}
+
+div.password-input{
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+div.password-input svg{
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.5rem;
+}
+
+input#password{
+  display: flex;
+  justify-content: center;
+  border: 1px solid #00d95f;
+  background-color: white;
+  color: black;
+}
+
+div.login-btn{
+  display: flex;
+  justify-content: center;
+}
+
+button.btn{
+  background-color: green;
+  border-radius: 30px;
+  width: 150px;
+  height: 40px;
+  text-decoration: none;
+  border: 0 none;
+  color: white;
+  font-weight: 800;
+  margin: 1rem;
+}

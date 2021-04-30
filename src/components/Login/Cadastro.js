@@ -36,6 +36,7 @@ class CadastroForm extends React.Component {
         let nameError="";
         let emailError="";
         let passwordError="";
+        let confEmailError='';
 
         if(!this.state.name){
             nameError = "Preencha com um nome válido"
@@ -45,12 +46,16 @@ class CadastroForm extends React.Component {
             emailError="Email inválido"
         }
 
+        if(this.state.confEmail !== this.state.email){
+            confEmailError = "Email diferente"
+        }
+
         if(!this.state.password){
             passwordError = "Senha inválida"
         }
 
-        if(emailError || nameError || passwordError){
-            this.setState({emailError, nameError, passwordError});
+        if(emailError || nameError || passwordError || confEmailError){
+            this.setState({emailError, nameError, passwordError, confEmailError});
             return false;
         }
         return true;
@@ -60,11 +65,18 @@ class CadastroForm extends React.Component {
         return (
         <form onSubmit={this.handleSubmit}>
             <Paper className="fundo-form">
-                <h1 className="form-titulo">Login</h1>
+                <h1 className="form-titulo">Cadastro</h1>
                 <Grid container spacing={3}>
                     <Grid className="form-cadastro__group" item xs={12}>
                         <label htmlFor="name">Usuário:</label>
-                        <input required id="name" name="name" type="text" onChange={e => this.onChange(e)} value={this.state.name}/>
+                        <input 
+                            required 
+                            id="name" 
+                            name="name" 
+                            type="text" 
+                            onChange={e => this.onChange(e)} 
+                            value={this.state.name}
+                        />
                         <div className="error">{this.state.nameError}</div>
                     </Grid>
                     <Grid className="form-cadastro__group" item xs={12}>
@@ -75,6 +87,7 @@ class CadastroForm extends React.Component {
                     <Grid className="form-cadastro__group" item xs={12}>
                         <label htmlFor="name">Confimarção de email:</label>
                         <input required id="confEmail" name="confEmail" type="confEmail" onChange={e => this.onChange(e)} value={this.state.confEmail}/>
+                        <div className="error">{this.state.confEmailError}</div>
                     </Grid>
                     <Grid className="form-cadastro__group" item xs={12}>
                         <label htmlFor="name">Senha:</label>
@@ -83,7 +96,7 @@ class CadastroForm extends React.Component {
                     </Grid>
                 </Grid>
                 <div>
-                    <button onClick={e => this.onSubmit(e)} className="form-btn" type="submit">Logar</button>
+                    <button onClick={e => this.onSubmit(e)} className="form-btn" type="submit">Cadastrar</button>
                 </div>
             </Paper>
         </form>
