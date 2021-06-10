@@ -76,8 +76,8 @@ p{
   font-size: xx-large;
   font-weight: 600;
   position:absolute;
-  top:70%;
-  left: 23%;
+  top: 75%;
+  left: 20%;
 }
 
 .wrapper {
@@ -125,7 +125,7 @@ div.box.f{
 }
 
 img.Social{
-  width: 15%;
+  width: 30%;
   padding: 1em;
 }
 
@@ -240,6 +240,12 @@ div.error{
   justify-content: center;
   height: 80vh;
   width: 100%;
+}
+form.login-form{
+  display: grid;
+  background-color: transparent;
+  width: 400px;
+  margin-left: 0;
 }
 
 h1.login-titulo{

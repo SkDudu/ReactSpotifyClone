@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './spotify.svg';
 import instagram from './instagram.svg'
 import facebook from './facebook.svg'
 import twitter from './twitter.svg'
+
+import { parseISO, isAfter } from 'date-fns';
 
 function Footer(){
     return(

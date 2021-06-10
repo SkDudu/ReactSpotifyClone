@@ -4,8 +4,13 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Cadastro from './components/Login/Cadastro'
 import Login from './components/Login/Login'
+import Playlist from './components/Dashboard/Playlist';
+import FaqPage from './components/Faq/FaqPage';
+import Date from "./components/date"
+
 import './App.css';
-import React, { useState } from "react";
+import React from "react";
+import axios from 'axios';
 import {
   BrowserRouter as Router,
   Switch,
@@ -14,11 +19,23 @@ import {
 } from "react-router-dom";
 
 export default function App() {
+  axios.get('user').then(
+    res => {
+      console.log(res);
+    },
+    err =>{
+      console.log(err);
+    }
+  )
+
   return(
     <Router>
       <div>
         <Navbar />
           <Switch>
+          <Route path="/playlist">
+              <Playlist />
+            </Route>
             <Route path="/login">
               <Login />
             </Route>
@@ -26,13 +43,14 @@ export default function App() {
               <Cadastro />
             </Route>
             <Route path="/faq">
-              <Faq />
+              <FaqPage />
             </Route>
             <Route path="/">
               <Home />
             </Route>
           </Switch>
         <Footer />
+        <Date />
       </div>
     </Router>
   );
@@ -52,23 +70,4 @@ function Home() {
   );
 }
 
-function Faq() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <nav className="nav-bar">
-        <img className="App-logo" src={logo} alt="Logo" />
-          <ul>
-            <a href="#">Premium</a>
-            <a href="#">Suporte</a>
-            <a href="#">Baixar</a>
-            <a>|</a>
-            <a href="#">Inscrever-se</a>
-            <a href="#">Entrar</a>
-          </ul>
-        </nav>
-      </header>
-    </div>
-  );
-}
 

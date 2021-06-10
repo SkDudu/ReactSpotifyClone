@@ -1,0 +1,11 @@
+react App
+npm start
+
+iniciar json server
+json-server --watch db.json --port 3001
+
+dbadmin
+dbadmin1234
+
+
+mongodb+srv://dbadmin:<password>@cluster0.2hjcr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
